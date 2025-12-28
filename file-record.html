@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gods Cruiseline — File Record</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Global header and navigation shared across the system. -->
+        <p class="site-title">Gods Cruiseline</p>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="system.html">System</a></li>
+            <li><a href="divisions.html">Divisions</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="access.html">Access</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Record filing interface. -->
+        <h1>File Record</h1>
+        <form class="form" aria-label="File record">
+          <p class="meta" data-form-notice hidden></p>
+
+          <div>
+            <label for="record-id">Record ID</label>
+            <input
+              id="record-id"
+              name="record-id"
+              type="text"
+              placeholder="GC-R-###"
+              required
+              data-record-field="id"
+            />
+          </div>
+
+          <div>
+            <label for="record-title">Title</label>
+            <input id="record-title" name="record-title" type="text" required data-record-field="title" />
+          </div>
+
+          <div>
+            <label for="record-division">Division</label>
+            <select id="record-division" name="record-division" required data-record-field="division">
+              <option value="broadcast">broadcast</option>
+              <option value="works">works</option>
+              <option value="research">research</option>
+              <option value="narrative">narrative</option>
+              <option value="exchange">exchange</option>
+              <option value="access">access</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="record-medium">Medium</label>
+            <select id="record-medium" name="record-medium" required data-record-field="medium">
+              <option value="text">text</option>
+              <option value="audio">audio</option>
+              <option value="video">video</option>
+              <option value="system">system</option>
+              <option value="image">image</option>
+              <option value="dataset">dataset</option>
+              <option value="artifact">artifact</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="record-year">Year</label>
+            <input id="record-year" name="record-year" type="number" required data-record-field="year" />
+          </div>
+
+          <div>
+            <label for="record-status">Status</label>
+            <select id="record-status" name="record-status" required data-record-field="status">
+              <option value="public">public</option>
+              <option value="registered">registered</option>
+              <option value="authorized">authorized</option>
+              <option value="restricted">restricted</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="record-author">Author</label>
+            <input id="record-author" name="record-author" type="text" data-record-field="author" />
+          </div>
+
+          <div>
+            <label for="record-origin">Origin</label>
+            <input id="record-origin" name="record-origin" type="text" data-record-field="origin" />
+          </div>
+
+          <div>
+            <label for="record-source-ref">Source Ref</label>
+            <input id="record-source-ref" name="record-source-ref" type="text" data-record-field="sourceRef" />
+          </div>
+
+          <div>
+            <label for="record-date-created">Date Created</label>
+            <input id="record-date-created" name="record-date-created" type="date" data-record-field="dateCreated" />
+          </div>
+
+          <div>
+            <label for="record-date-published">Date Published</label>
+            <input id="record-date-published" name="record-date-published" type="date" data-record-field="datePublished" />
+          </div>
+
+          <div>
+            <label for="record-tags">Tags</label>
+            <input id="record-tags" name="record-tags" type="text" data-record-field="tags" />
+          </div>
+
+          <div>
+            <label for="record-sensitivity-level">Sensitivity Level</label>
+            <input
+              id="record-sensitivity-level"
+              name="record-sensitivity-level"
+              type="text"
+              data-record-field="sensitivityLevel"
+            />
+          </div>
+
+          <div>
+            <label for="record-sensitivity-note">Sensitivity Note</label>
+            <textarea
+              id="record-sensitivity-note"
+              name="record-sensitivity-note"
+              rows="3"
+              data-record-field="sensitivityNote"
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="record-archival-state">Archival State</label>
+            <select id="record-archival-state" name="record-archival-state" required data-record-field="archivalState">
+              <option value="active">active</option>
+              <option value="archived">archived</option>
+              <option value="decayed">decayed</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="record-archival-note">Archival Note</label>
+            <textarea
+              id="record-archival-note"
+              name="record-archival-note"
+              rows="3"
+              hidden
+              data-record-field="archivalNote"
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="record-project">Associated Projects</label>
+            <input
+              id="record-project"
+              name="record-project"
+              type="text"
+              placeholder="terminal-ops, continuity-ledger"
+              data-record-field="project"
+            />
+          </div>
+
+          <div>
+            <label for="record-context">Context / Notes (internal, not published)</label>
+            <textarea id="record-context" name="record-context" rows="4" data-record-field="context"></textarea>
+          </div>
+
+          <div>
+            <button type="submit">File Record</button>
+            <a href="records.html">Cancel</a>
+          </div>
+        </form>
+      </main>
+
+      <footer>
+        <!-- Footer metadata shared across pages. -->
+        <div class="footer-grid">
+          <span>Gods Cruiseline Infomatics</span>
+          <span>Cycle <span data-year></span></span>
+          <span>Record Intake: GC-REC-F1</span>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

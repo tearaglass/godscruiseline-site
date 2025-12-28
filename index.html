@@ -1,92 +1,39 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>God's Cruiseline</title>
-  <style>
-    body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      margin: 0;
-      color: #0f172a;
-      background: radial-gradient(circle at 20% 20%, #f5f7fb 0, #e8f0ff 45%, #dbeafe 100%);
-      min-height: 100vh;
-      display: flex;
-      flex-direction: column;
-    }
-    header {
-      padding: 24px;
-      background: #0f172a;
-      color: #f8fafc;
-    }
-    header .brand {
-      font-size: 22px;
-      font-weight: 800;
-      letter-spacing: 0.6px;
-    }
-    nav a {
-      color: #c7d2fe;
-      margin-right: 16px;
-      text-decoration: none;
-      font-weight: 600;
-    }
-    nav a:hover { color: #eef2ff; }
-    main {
-      flex: 1;
-      max-width: 880px;
-      margin: 48px auto;
-      padding: 0 24px 64px;
-      line-height: 1.6;
-      text-align: center;
-    }
-    h1 { font-size: 40px; margin-bottom: 12px; }
-    p { margin: 12px 0; }
-    .card {
-      display: inline-block;
-      background: #fff;
-      border: 1px solid #e2e8f0;
-      border-radius: 12px;
-      padding: 18px 24px;
-      margin: 12px;
-      box-shadow: 0 6px 20px rgba(15, 23, 42, 0.08);
-      transition: transform 150ms ease, box-shadow 150ms ease;
-      min-width: 220px;
-    }
-    .card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 24px rgba(15, 23, 42, 0.12);
-    }
-    .card a {
-      text-decoration: none;
-      color: #0f172a;
-      font-weight: 700;
-      font-size: 18px;
-    }
-    footer {
-      text-align: center;
-      color: #475569;
-      padding: 24px 16px 32px;
-      font-size: 14px;
-    }
-  </style>
-</head>
-<body>
-  <header>
-    <div class="brand">God's Cruiseline</div>
-    <nav>
-      <a href="/terms">Terms of Service</a>
-      <a href="/privacy">Privacy Policy</a>
-    </nav>
-  </header>
-  <main>
-    <h1>Welcome aboard God's Cruiseline</h1>
-    <p>Simple placeholder site while we finish the full experience. You can access our policies below.</p>
-    <div>
-      <div class="card"><a href="/terms">Terms of Service</a></div>
-      <div class="card"><a href="/privacy">Privacy Policy</a></div>
-    </div>
-  </main>
-  <footer>&copy; 2024 God's Cruiseline. All rights reserved.</footer>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gods Cruiseline — Terminal</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Global header and navigation shared across the system. -->
+        <p class="site-title">Gods Cruiseline</p>
+      </header>
 
+      <main>
+        <!-- Terminal landing context and system status. -->
+        <h1>Terminal</h1>
+        <p>System operating normally. Records index synchronized.</p>
+        <p class="meta">Current environment: Internal access node.</p>
+        <p><a href="system.html">Enter system</a></p>
+
+        <h2>Current Notices</h2>
+        <p>Routine audits in progress. Availability subject to authorization.</p>
+      </main>
+
+      <footer>
+        <!-- Footer metadata shared across pages. -->
+        <div class="footer-grid">
+          <span>Gods Cruiseline Infomatics</span>
+          <span>Cycle <span data-year>2026</span></span>
+          <span>Terminal ID: GC-TERM-01</span>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

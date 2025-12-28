@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gods Cruiseline — Record</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Global header and navigation shared across the system. -->
+        <p class="site-title">Gods Cruiseline</p>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="system.html">System</a></li>
+            <li><a href="divisions.html">Divisions</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="access.html">Access</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Record detail view populated from the data registry. -->
+        <h1 data-record-title></h1>
+        <dl class="meta-list" data-record-meta>
+          <dt>Record ID</dt>
+          <dd data-field="id"></dd>
+          <dt>Division</dt>
+          <dd data-field="division"></dd>
+          <dt>Medium</dt>
+          <dd data-field="medium"></dd>
+          <dt>Year</dt>
+          <dd data-field="year"></dd>
+          <dt>Status</dt>
+          <dd data-field="status"></dd>
+          <dt data-archival-term></dt>
+          <dd data-archival-note></dd>
+        </dl>
+        <p class="meta" data-record-status></p>
+        <section class="record-content" data-record-content></section>
+        <section class="record-annotations" data-annotations hidden>
+          <h2>Annotations</h2>
+
+          <ul class="annotation-list" data-annotation-list>
+            <!-- annotations will be injected here -->
+          </ul>
+
+          <p class="meta" data-annotation-empty>No annotations recorded.</p>
+
+          <form class="annotation-form" aria-label="Add annotation">
+            <label for="annotation-text">Add note</label>
+            <textarea
+              id="annotation-text"
+              rows="4"
+              required
+              data-annotation-input
+            ></textarea>
+
+            <div class="form-actions">
+              <button type="submit">Record</button>
+            </div>
+
+            <p class="meta" data-annotation-notice hidden></p>
+          </form>
+        </section>
+        <section class="record-related">
+          <h2>Related Records</h2>
+          <p class="meta">Related records listing pending.</p>
+        </section>
+      </main>
+
+      <footer>
+        <!-- Footer metadata shared across pages. -->
+        <div class="footer-grid">
+          <span>Gods Cruiseline Infomatics</span>
+          <span>Cycle <span data-year>2026</span></span>
+          <span>Record Viewer: GC-REC-V1</span>
+        </div>
+      </footer>
+    </div>
+    <script src="records-data.js"></script>
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

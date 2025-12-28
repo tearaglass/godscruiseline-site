@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gods Cruiseline — Records</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Global header and navigation shared across the system. -->
+        <p class="site-title">Gods Cruiseline</p>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="system.html">System</a></li>
+            <li><a href="divisions.html">Divisions</a></li>
+            <li><a href="records.html" aria-current="page">Records</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="access.html">Access</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Records index populated from the data registry. -->
+        <h1>Records Index</h1>
+        <p>Registry of published and controlled records across all divisions.</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Record ID</th>
+              <th scope="col">Title</th>
+              <th scope="col">Division</th>
+              <th scope="col">Year</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody data-records-body></tbody>
+        </table>
+
+        <p class="meta" data-records-notice hidden></p>
+      </main>
+
+      <footer>
+        <!-- Footer metadata shared across pages. -->
+        <div class="footer-grid">
+          <span>Gods Cruiseline Infomatics</span>
+          <span>Cycle <span data-year>2026</span></span>
+          <span>Records Ledger: GC-REC-01</span>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

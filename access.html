@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gods Cruiseline — Access</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Global header and navigation shared across the system. -->
+        <p class="site-title">Gods Cruiseline</p>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="system.html">System</a></li>
+            <li><a href="divisions.html">Divisions</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="access.html" aria-current="page">Access</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Access and participation information. -->
+        <h1>Access</h1>
+        <p>Participation is subject to authorization and ongoing review.</p>
+        <p>Access levels determine visibility of records, operational functions, and division resources.</p>
+
+        <p class="meta">Access subject to authorization. This record is not available at your clearance level.</p>
+
+        <section aria-label="Internal tools">
+          <p class="meta">Internal Tools</p>
+          <p class="meta">
+            <a class="meta" href="file-record.html">File Record</a>
+            <span aria-hidden="true">•</span>
+            <a class="meta" href="register-project.html">Register Project</a>
+          </p>
+        </section>
+
+        <section aria-label="Input">
+          <form class="form" aria-label="Passphrase input">
+            <div>
+              <input id="passphrase-input" name="passphrase" type="password" placeholder="" />
+            </div>
+            <div>
+              <button type="submit">Enter</button>
+            </div>
+            <p class="meta" data-passphrase-notice hidden></p>
+          </form>
+        </section>
+      </main>
+
+      <footer>
+        <!-- Footer metadata shared across pages. -->
+        <div class="footer-grid">
+          <span>Gods Cruiseline Infomatics</span>
+          <span>Cycle <span data-year>2026</span></span>
+          <span>Access Registry: GC-ACC-01</span>
+          <span><a href="privacy/">Privacy</a></span>
+          <span><a href="terms/">Terms</a></span>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

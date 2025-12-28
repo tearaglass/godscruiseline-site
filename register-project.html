@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gods Cruiseline — Register Project</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Global header and navigation shared across the system. -->
+        <p class="site-title">Gods Cruiseline</p>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="system.html">System</a></li>
+            <li><a href="divisions.html">Divisions</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="access.html">Access</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Project registration interface. -->
+        <h1>Register Project</h1>
+        <form class="form" aria-label="Register project">
+          <p class="meta" data-form-notice hidden></p>
+
+          <div>
+            <label for="project-id">Project ID</label>
+            <input
+              id="project-id"
+              name="project-id"
+              type="text"
+              placeholder="continuity-ledger"
+              required
+              data-project-field="id"
+            />
+          </div>
+
+          <div>
+            <label for="project-name">Name</label>
+            <input id="project-name" name="project-name" type="text" required data-project-field="name" />
+          </div>
+
+          <div>
+            <label for="project-description">Description</label>
+            <textarea
+              id="project-description"
+              name="project-description"
+              rows="3"
+              data-project-field="description"
+            ></textarea>
+          </div>
+
+          <div>
+            <label for="project-status">Status</label>
+            <select id="project-status" name="project-status" required data-project-field="status">
+              <option value="public">public</option>
+              <option value="registered">registered</option>
+              <option value="authorized">authorized</option>
+              <option value="restricted">restricted</option>
+            </select>
+          </div>
+
+          <div>
+            <label for="project-lead">Lead</label>
+            <input id="project-lead" name="project-lead" type="text" data-project-field="lead" />
+          </div>
+
+          <div>
+            <label for="project-scope">Scope</label>
+            <textarea id="project-scope" name="project-scope" rows="3" data-project-field="scope"></textarea>
+          </div>
+
+          <div>
+            <label for="project-start-year">Start Year</label>
+            <input id="project-start-year" name="project-start-year" type="number" data-project-field="startYear" />
+          </div>
+
+          <div>
+            <label for="project-end-year">End Year</label>
+            <input id="project-end-year" name="project-end-year" type="number" data-project-field="endYear" />
+          </div>
+
+          <div>
+            <button type="submit">Register Project</button>
+            <a href="projects.html">Cancel</a>
+          </div>
+        </form>
+      </main>
+
+      <footer>
+        <!-- Footer metadata shared across pages. -->
+        <div class="footer-grid">
+          <span>Gods Cruiseline Infomatics</span>
+          <span>Cycle <span data-year></span></span>
+          <span>Project Registry: GC-PRJ-R1</span>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>

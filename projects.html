@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Gods Cruiseline — Projects</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <!-- Global header and navigation shared across the system. -->
+        <p class="site-title">Gods Cruiseline</p>
+        <nav aria-label="Primary">
+          <ul>
+            <li><a href="system.html">System</a></li>
+            <li><a href="divisions.html">Divisions</a></li>
+            <li><a href="records.html">Records</a></li>
+            <li><a href="projects.html" aria-current="page">Projects</a></li>
+            <li><a href="access.html">Access</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <main>
+        <!-- Projects index populated from the registry. -->
+        <h1>Projects</h1>
+        <p>Projects group related records without altering record status or access.</p>
+
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col">Project</th>
+              <th scope="col">Description</th>
+              <th scope="col">Status</th>
+            </tr>
+          </thead>
+          <tbody data-projects-body></tbody>
+        </table>
+      </main>
+
+      <footer>
+        <!-- Footer metadata shared across pages. -->
+        <div class="footer-grid">
+          <span>Gods Cruiseline Infomatics</span>
+          <span>Cycle <span data-year>2026</span></span>
+          <span>Project Index: GC-PRJ-01</span>
+        </div>
+      </footer>
+    </div>
+
+    <script type="module" src="script.js"></script>
+  </body>
+</html>
